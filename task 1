@@ -1,0 +1,44 @@
+/*Create a program that generates a random number and asks the
+user to guess it. Provide feedback on whether the guess is too
+high or too low until the user guesses the correct number*/
+
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    int num,guess,tries=0;
+	srand(time(0)); 
+	num = rand() % 100 + 1; 
+	cout << "Guess My Number Game\n\n";
+
+	do
+	{
+		cout<<"Enter any number between 0 to 100 =55";
+		cin>>guess;
+		tries++;
+		if (guess<num)
+		{
+			tries++;
+			cout<<"The number you have entered is lowen then the random number.\n\n";
+			cout<<"It's your nrxt chance\n\n";
+		}
+		else if (guess>num)
+		{
+			cout<<"The numer you have entered is greater than the random number\n\n";
+			cout<<"It's your nrxt chance\n\n";
+		}
+		else{
+			cout<<"The number you have enterd is equal to the random number\n\n";
+			cout<<"you have win the game\n\n";
+		}
+	
+		
+	}while(guess != num);
+	
+
+	return 0;
+}
