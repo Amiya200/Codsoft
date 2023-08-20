@@ -1,0 +1,82 @@
+/*Create a program that manages student grades. Allow the user
+to input student names and their corresponding grades.
+Calculate the average grade and display it along with the highest
+and lowest grades*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int english, mathematic, computer, physics, chemistry, sum, avg;
+    string name;
+    cout<<"Enter your name for the further process =";
+    cin>>name;
+    cout<<"Now enter the grades of English, Mathematis, Computer, Physics and Chemistry\n\n";
+    cout<<"Enter the marks in English= ";
+    cin>>english;
+    cout<<"Enter the marks in Mathematics = ";
+    cin>>mathematic;
+     cout<<"Enter the marks in Computer= ";
+    cin>>computer;
+    cout<<"Enter the marks in Physics = ";
+    cin>>physics;
+    cout<<"Enter the marks in Chemistry = ";
+    cin>>chemistry;
+    sum=english+ mathematic+ computer+ physics+ chemistry;
+    avg=sum/5;
+    cout<<"\n\nThe average of your marks is ="<<avg;
+    if(english>mathematic && english>computer && english>physics && english>chemistry)
+    {
+        cout<<"\n\nyou have scored higest marks in English ="<<english;
+        cout<<"\n\nCongratulation for great performance in English";
+    }
+    else if(mathematic>english && mathematic>computer && mathematic>physics && mathematic>chemistry)
+    {
+        cout<<"\n\nyou have scored higest marks in Mathematic> ="<<mathematic;
+        cout<<"\n\nCongratulation for great performance in Mathematic>";
+    }
+    else if(computer>english && computer>mathematic && computer>physics && computer>chemistry)
+    {
+        cout<<"\n\nyou have scored higest marks in Computer> ="<<computer;
+        cout<<"\n\nCongratulation for great performance in Computer>";
+    }
+    else if(physics>english && physics>mathematic && physics>computer && physics>chemistry)
+    {
+        cout<<"\n\nyou have scored higest marks in Physics> ="<<physics;
+        cout<<"\n\nCongratulation for great performance in Physics>";
+    }
+    else if(chemistry>english && chemistry>mathematic && chemistry>computer && chemistry>physics)
+    {
+        cout<<"\n\nyou have scored higest marks in Chemistry> ="<<chemistry;
+        cout<<"\n\nCongratulation for great performance in Chemistry>";
+    }
+    else
+    cout<<"\n\nYou have scored equal marks in two or more than two subjects.";
+    if(english<mathematic && english<computer && english<physics && english<chemistry)
+    {
+        cout<<"\n\nyou have scored Lowest marks in English ="<<english;
+        cout<<"\n\nWork hard to improve your performance in English>";
+    }
+    else if(mathematic<english && mathematic<computer && mathematic<physics && mathematic<chemistry)
+    {
+        cout<<"\n\nyou have scored Lowest marks in Mathematic> ="<<mathematic;
+        cout<<"\n\nWork hard to improve your performance in Mathematics>";
+    }
+    else if(computer<english && computer<mathematic && computer<physics && computer<chemistry)
+    {
+        cout<<"\n\nyou have scored Lowest marks in Computer> ="<<computer;
+        cout<<"\n\nWork hard to improve your performance in Computer>";
+    }
+    else if(physics<english && physics<mathematic && physics<computer && physics<chemistry)
+    {
+        cout<<"\n\nyou have scored Lowest marks in Physics> ="<<physics;
+        cout<<"\n\nWork hard to improve your performance in Physics>";
+    }
+    else if(chemistry<english && chemistry<mathematic && chemistry<computer && chemistry<physics)
+    {
+        cout<<"\n\nyou have scored Lowest marks in Chemistry> ="<<chemistry;
+        cout<<"\n\nWork hard to improve your performance in Chemistry>";
+    }
+    else
+    cout<<"\n\nYou have scored equal marks in two or more than two subjects.";
+    return 0;
+}
