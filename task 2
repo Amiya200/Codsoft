@@ -1,0 +1,44 @@
+/*Develop a calculator program that performs basic arithmetic
+operations such as addition, subtraction, multiplication, and
+division. Allow the user to input two numbers and choose an
+operation to perform.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int var1, var2, sum, diff, multi, div;
+    char ch;
+    cout<<"Enter the value of first variable =";
+    cin>>var1;
+    cout<<"Enter the value of Second variable =";
+    cin>>var2;
+    cout<<"Enter the operation which you want to perform as(+,-,*,/) =";
+    cin>>ch;
+
+    switch (ch)
+    {
+    case('+'):
+        sum=var1+var2;
+        cout<<"The sum of two variable is ="<<sum<<endl;
+        break;
+    case('-'):
+        diff=var1-var2;
+        cout<<"The differnce between two variable is ="<<diff<<endl;
+        break;
+    case('*'):
+        multi=var1*var2;
+        cout<<"The product of two variable is ="<<multi<<endl;
+        break;
+    case('/'):
+        div=var1/var2;
+        cout<<"if we devide first variable from second then the result is ="<<div<<endl;
+        break;
+    
+    default:
+        cout<<"Plese enter the correct choice from the given below options";
+        cout<<"+,-,*,/";
+        break;
+    }
+    return 0;
+
+}
